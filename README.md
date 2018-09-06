@@ -1,8 +1,8 @@
 # Bamazon
 
-##Bamazon Customer
+## Bamazon Customer
 
 ![](Bamazon_Recording.gif)
 
-##Bamazon Manager
+## Bamazon Manager
 ![](Bamzon_Manager.gif)
