@@ -61,9 +61,10 @@ function lowInventory() {
             if (parseInt(res[i].stock_quantity) < 5) {
                 console.log("Item ID: " + res[i].item_id + "\nProduct Name: " + res[i].product_name + "\nDepartment: " + res[i].department_name + "\nPrice: $" + res[i].price + "\nQuantity: " + res[i].stock_quantity);
                 console.log("----------------------");
-            }
+            }  
         }
         afterConnection();
+        
     });
 };
 
@@ -124,7 +125,7 @@ function addInventory() {
             var qtyAdded = parseInt(answer.qtyAdded);
             con.query("UPDATE products SET ? WHERE ?", [
                 {stock_quantity: parseFloat((res[itemIndex].stock_quantity) + qtyAdded)},
-                {product_name: itemIndex},
+                {item_id: answer.itemAdded},
             ], function(){
                 console.log("Items added");
                 availableProducts();
